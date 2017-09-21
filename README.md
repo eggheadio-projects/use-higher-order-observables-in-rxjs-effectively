@@ -1,1 +1,1 @@
-# rxjs-get-started-with-higher-order-observables-in-rxjs
+# use-higher-order-observables-in-rxjs-effectively
