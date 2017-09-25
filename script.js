@@ -4,7 +4,7 @@ numbersObservable
   .groupBy(x => x % 2)
   .map(innerObs => innerObs.count())
   .mergeAll()
-  .subscribe(x => console.log(x));
+  .subscribe(x => console.log(x) || displayInPreview(x));
 
 /*
 --0--1--2--3--4|
@@ -28,3 +28,12 @@ numbersObservable
 --------------(3,2)|
 
 */
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}
