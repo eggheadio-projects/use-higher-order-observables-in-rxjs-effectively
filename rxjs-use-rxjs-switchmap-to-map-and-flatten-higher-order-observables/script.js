@@ -13,4 +13,13 @@ const responseObservable = clickObservable
 // switchMap = map ... + ... switch
 
 responseObservable
-  .subscribe(x => console.log(x.email));
+  .subscribe(x => console.log(x.email) || displayInPreview(x.email));
+
+  
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}
