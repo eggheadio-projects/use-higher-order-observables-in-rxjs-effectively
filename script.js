@@ -14,4 +14,13 @@ const emailObservable = clickObservable
 // mergeMap = map ... + ... mergeAll
 
 emailObservable
-  .subscribe(email => console.log(email));
+  .subscribe(email => console.log(email) || displayInPreview(email));
+
+  
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}
