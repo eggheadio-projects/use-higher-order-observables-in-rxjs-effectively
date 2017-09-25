@@ -17,4 +17,13 @@ const all = busObservable
   .groupBy(obj => obj.code)
   .mergeMap(innerObs => innerObs.skip(1).map(obj => obj.value));
 
-all.subscribe(x => console.log(x));
+all.subscribe(x => console.log(x) || displayInPreview(x));
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}
