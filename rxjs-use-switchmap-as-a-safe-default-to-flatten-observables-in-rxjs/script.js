@@ -1,10 +1,10 @@
 const clickObservable = Rx.Observable
   .fromEvent(document, 'click');
 
-const requestObservable = ...
+// const requestObservable = ...
 
-const responseObservable = requestObservable
-  .switchMap(request => ... response)
+// const responseObservable = requestObservable
+//   .switchMap(request => ... response)
 
 const clockObservable = clickObservable
   .switchMap(click => {
